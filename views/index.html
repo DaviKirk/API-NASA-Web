@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nasa photos</title>
+    <link rel="stylesheet" href="../static/css/style.css">
+    <link rel="icon" href="../static/img/NASA_logo.svg.ico" type="image/x-icon">
+</head>
+
+<body>
+    <nav class="navbar" id="navbar">
+        <img class="icon-nasa"
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/NASA_logo.svg/2449px-NASA_logo.svg.png"
+            alt="" width="64px">
+        <a class="nav-button" href="https://github.com/DaviKirk/API-NASA-Web.git">GitHub</a>
+        <a class="nav-button" href="https://api.nasa.gov/">API NASA</a>
+    </nav>
+    <header>
+        <div class="header-text-container">
+            <h1 class="header-tittle playfair-display">Bem-vindo à NASA Photos</h1>
+            <p class="header-text barlow">Explore imagens incríveis do espaço.</p>
+        </div>
+        <video class="header-video" autoplay muted loop>
+            <source src="../static/img/woldTopView.mp4" type="video/mp4">
+        </video>
+    </header>
+    <main>
+        <section class="post-feed">
+            {% for img in imgList %}
+            <div class="post-container">
+                <div class="img-container">
+                    <img class="img-post" src="{{img.url}}" alt="">
+                </div>
+                <div class="description-post">
+                    <h3 class="post-text">copyright:</h3>
+                    {% if img.copyright %}
+                    <h3 class="post-text">{{img.copyright}}</h3>
+                    {% else %}
+                    <h3 class="post-text">No copyright</h3>
+                    {% endif %}
+                    <div>
+                        <a href="{{url_for('infoImage', date=img.date)}}" class="button-post barlow">Saiba +</a>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </section>
+    </main>
+    <footer>
+        <a class="button-footer" href="https://www.linkedin.com/in/davi-kirk-73b152327/">
+            <i class="fa-brands fa-linkedin"></i>
+        </a>
+        <a class="button-footer" href="https://github.com/DaviKirk">
+            <i class="fa-brands fa-github"></i>
+        </a>
+    </footer>
+
+</body>
+<script src="https://kit.fontawesome.com/6d56094b7a.js" crossorigin="anonymous"></script>
+<script src="../static/js/navbar.js"></script>
+</html>

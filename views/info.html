@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nasa photos</title>
+    <link rel="stylesheet" href="../static/css/style.css">
+    <link rel="icon" href="../static/img/NASA_logo.svg.ico" type="image/x-icon">
+</head>
+
+<body style="overflow: hidden;">
+    <a class="return-button" href="{{url_for('Home')}}">
+        <div class="return-button-container">
+            <i class="fa-solid fa-arrow-left" style="color: #ffffff;"></i>
+        </div>
+    </a>
+    <div class="container-explanation">
+        <h2 class="date-info barlow">Date:{{imgInfo.date}}</h2>
+        <div class="container-text-info">
+            <p class="text-info barlow">{{imgInfo.explanation}}</p>
+            <div class="copy-text">
+                <p class="post-text">copyright: </p>
+                {% if imgInfo.copyright %}
+                <p class="post-text">{{imgInfo.copyright}}</p>
+                {% else %}
+                <p class="post-text">No copyright</p>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+    <img src="{{imgInfo.hdurl}}" class="img-info">
+
+</body>
+<script src="https://kit.fontawesome.com/6d56094b7a.js" crossorigin="anonymous"></script>
+
+</html>
