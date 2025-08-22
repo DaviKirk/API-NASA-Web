@@ -4,16 +4,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nasa photos</title>
+    <title>NASA photos</title>
     <link rel="stylesheet" href="../static/css/style.css">
     <link rel="icon" href="../static/img/NASA_logo.svg.ico" type="image/x-icon">
 </head>
 
-<body>
+<body class="cursor" id="body">
     <nav class="navbar" id="navbar">
-        <img class="icon-nasa"
+        <img class="icon-nasa" id="icon-nasa"
             src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/NASA_logo.svg/2449px-NASA_logo.svg.png"
             alt="" width="64px">
+        <h1 class="count barlow" id="count"></h1>
         <a class="nav-button" href="https://github.com/DaviKirk/API-NASA-Web.git">GitHub</a>
         <a class="nav-button" href="https://api.nasa.gov/">API NASA</a>
     </nav>
@@ -60,4 +61,6 @@
 </body>
 <script src="https://kit.fontawesome.com/6d56094b7a.js" crossorigin="anonymous"></script>
 <script src="../static/js/navbar.js"></script>
+<script src="../static/js/logo.js"></script>
+
 </html>

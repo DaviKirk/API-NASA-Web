@@ -14,6 +14,24 @@
     font-style: normal;
 }
 
+.count {
+    opacity: 0;
+    color: #F00;
+    transition: 3s;
+
+}
+
+.count.visible {
+    color: #F00;
+    font-weight: 300;
+    opacity: 1;
+}
+
+.cursor.rocket {
+    cursor: url("../img/rocketCursor.png"), pointer;
+}
+
+
 a {
     color: inherit;
     text-decoration: none;
@@ -55,13 +73,13 @@ a {
     position: fixed;
     transition: 200ms;
     width: 100%;
-     
+
 }
 
 .navbar.scrolled {
     background-color: #00000063;
-    backdrop-filter: blur(10px);  
-    -webkit-backdrop-filter: blur(10px);    
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     transition: 600ms;
 }
 
