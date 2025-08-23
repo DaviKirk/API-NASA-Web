@@ -5,15 +5,15 @@
 <h3>🔧Install in CMD</h3>
 
 ```bash
-<p>pip install flask</p>
-<p>pip install requests</p>
+pip install flask
+pip install requests
 
 ```
 
 <h3>▶️run in CMD</h3>
 
 ```bash
-<p>py app.py</p>
+py app.py
 ```
 
 After, open in browser:
